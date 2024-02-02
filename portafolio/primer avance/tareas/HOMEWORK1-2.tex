@@ -1,0 +1,236 @@
+\documentclass[journal]{IEEEtran}
+\usepackage{hyperref}
+
+\begin{document}
+%
+\title{Web progressive apps\\ Definitions, concepts, distinctions}
+
+\author{Juan Antonio Labrada Galvez,~\IEEEmembership{10A,~Ingenier\'ia en gesti\'on de software ,}
+        
+0320130575@miutt.edu.mx Wednesday, january 10th 2024}% <-this % stops a space
+        
+% The paper headers
+\markboth{Universidad tecnologica de tijuana}%
+{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for IEEE Journals}
+
+% make the title area
+\maketitle
+
+% As a general rule, do not put math, special symbols or citations
+% in the abstract or keywords.
+\section{What are the PWA?}
+
+Progressive Web Apps (PWAs) are a type of web application that delivers a native app-like experience to users while being built using web technologies.
+
+\section{Concepts of the PWA}
+
+1. Progressive Enhancement:\\
+   \\PWAs are designed to work for every user, regardless of the browser or device they use. They employ progressive enhancement to ensure a baseline experience for all users while providing advanced features for those with modern browsers.\\
+
+2. Responsive Design:\\
+   \\PWAs are built with responsive design principles, ensuring that they adapt and function well on various screen sizes and devices, including desktops, tablets, and smartphones.\\
+
+3. Connectivity Independence:\\
+   \\PWAs can function even in low or no network connectivity situations. They can use service workers to cache important resources, allowing users to access content even when offline or on slow networks.\\
+
+4. App-Like Interface:\\
+   \\PWAs provide a native app-like experience with smooth animations, transitions, and interactions. This is achieved through the use of modern web technologies like CSS Grid, Flexbox, and CSS animations.\\
+
+5. Installable:\\
+   \\PWAs can be installed on a user's device, similar to native apps, creating an icon on the home screen. This allows users to access the app quickly without going through a browser.\\
+
+6. App Shell Model:\\
+   \\PWAs often use the app shell model to separate the application's core structure (shell) from the content. This helps in loading the basic structure quickly, providing a faster perceived performance.\\% Note that keywords are not normally used for peerreview papers.
+
+\section{Distinctions between a "web app," a "progressive web app (PWA)," and a "service app." }
+
+\subsection{Web App:}
+
+\textit{Definition:}
+
+    A web app, short for web application, is an application software that runs on a web browser. Users access it through a web browser, and it does not require installation on the user's device.\\
+\\\textit{Advantages:}
+
+    \textbf{Cross-Platform Compatibility:} Web apps can run on various devices and platforms that have a compatible web browser.
+    
+    \textbf{Easy Updates:} Updates to a web app are instantly available to users without requiring them to download or install anything.
+    
+    \textbf{No Installation Required:} Users don't need to download or install anything, reducing the barrier to entry.
+    
+    \textbf{Easier Maintenance:} Maintenance is centralized on the server, making it easier to fix bugs or add features.\\
+\\\textit{Disadvantages:}
+
+    \textbf{Dependency on Internet:} Web apps heavily depend on internet connectivity; they may not work well or at all without a reliable internet connection.
+    
+    \textbf{Limited Device Integration:} Compared to native apps, web apps may have limited access to device features and APIs.
+
+\subsection{Progressive Web App (PWA):}
+
+\textit{Definition:}
+
+    A PWA is a type of web app that leverages modern web technologies to provide a more app-like experience. PWAs can work offline, send push notifications, and provide other features traditionally associated with native apps.\\
+\\\textit{Advantages:}
+
+    \textbf{Offline Functionality:} PWAs can work even when the user is offline or has a slow internet connection.
+    
+    \textbf{App-Like Experience:} PWAs offer a more seamless and native-like experience, including smooth animations and transitions.
+    
+    \textbf{Cross-Platform Compatibility:} Like traditional web apps, PWAs are compatible with various devices and platforms.
+    
+    \textbf{Responsive Design:} PWAs are designed to work well on different screen sizes.\\
+\\\textit{Disadvantages:}
+
+    \textbf{Limited Device Features:} PWAs may have limitations in accessing certain device features compared to native apps.
+    
+    \textbf{Limited App Store Exposure:} PWAs might not have the same visibility and discoverability as apps listed on popular app stores.
+
+\subsection{Web Service:}
+
+\textit{Definition:}
+
+    A web service is a software system designed to support interoperable machine-to-machine communication over a network. It provides functionality or data to other applications over the internet.\\
+\\\textit{Advantages:}
+
+    \textbf{Interoperability:} Web services allow different systems to communicate and share data, promoting interoperability.
+    
+    \textbf{Scalability:} Web services can handle a large number of requests, making them scalable.
+    
+    \textbf{Reusability:} Web services can be reused by different applications, reducing redundancy and promoting modularity.
+    
+    \textbf{Standardized Protocols:} Web services often use standardized protocols like SOAP or REST, making integration easier.\\
+\\\textit{Disadvantages:}
+
+    \textbf{Security Concerns:} Transmitting sensitive data over the internet requires robust security measures to prevent unauthorized access.
+    
+    \textbf{Complexity:} Implementing and maintaining web services can be complex, especially as the system grows.
+    
+    \textbf{Latency:} Depending on network conditions, there may be latency in accessing data or functionality from a web service.
+    
+\section{Development and execution tools for pwa}
+
+\subsection{Development Tools:}
+
+1. Code Editor:\\
+   \\Use a code editor like Visual Studio Code, Sublime Text, Atom, or any other editor of your choice for writing and editing your PWA code.\\
+
+2. Browser Developer Tools:\\
+   \\Browsers come with built-in developer tools (e.g., Chrome DevTools, Firefox Developer Tools). These tools are crucial for debugging, profiling, and testing your PWA during development.\\
+
+3. Version Control:\\
+   \\Version control systems like Git help manage your codebase. Platforms like GitHub, GitLab, or Bitbucket can host your repositories, enabling collaboration and version tracking.\\
+
+4. Node.js and npm:\\
+   \\Node.js is a JavaScript runtime, and npm is its package manager. They are essential for managing dependencies, running build scripts, and utilizing various development tools.\\
+
+5. Webpack or Parcel:\\
+   \\Bundlers like Webpack or Parcel help optimize and bundle your PWA's assets, making it more efficient for production.\\
+
+6. Service Worker Toolbox:\\
+   \\Tools like Workbox help you generate and manage service workers, facilitating offline capabilities and caching strategies in your PWA.\\
+
+\subsection{Testing Tools:}
+
+1. Lighthouse:\\
+   \\Lighthouse is an open-source, automated tool for improving the quality of web pages. It audits your PWA for performance, accessibility, progressive web app best practices, SEO, and more.\\
+
+2. BrowserStack or CrossBrowserTesting:\\
+   \\Cross-browser testing tools allow you to test your PWA on different browsers and devices to ensure compatibility.\\
+
+3. Jest or Mocha:\\
+   \\Testing frameworks like Jest or Mocha can be used for unit testing and integration testing of your PWA.\\
+
+\subsection{Execution and Deployment Tools:}
+
+1. Firebase Hosting:\\
+   \\Firebase Hosting provides a scalable, secure, and easy-to-use platform for hosting PWAs. It also offers features like SSL, CDN, and automatic deployment.\\
+
+2. Netlify:\\
+   \\Netlify is a platform that automates the deployment and hosting of web projects. It supports continuous integration and offers features like serverless functions and form handling.\\
+
+3. GitHub Pages:\\
+   \\If your PWA is hosted on GitHub, GitHub Pages is a simple way to deploy your static site.\\
+
+4. Docker:\\
+   \\Docker allows you to containerize your PWA, making it easy to deploy and scale in different environments.\\
+
+5. Continuous Integration (CI) Tools:\\
+   \\CI tools like Jenkins, Travis CI, or GitHub Actions can automate testing and deployment processes, ensuring that your PWA remains reliable during updates.\\
+
+\subsection{Objectives for a PWA Development Environment:}
+
+1. Cross-Platform Compatibility:\\
+   \\Ensure that the PWA works seamlessly across various browsers and devices, providing a consistent user experience.\\
+
+2. Offline Functionality:\\
+   \\Implement features using service workers to enable offline functionality, allowing users to access the app even when not connected to the internet.\\
+
+3. Responsive Design:\\
+   \\Design the PWA to be responsive, adapting to different screen sizes and orientations for a consistent user experience on various devices.\\
+
+4. App-Like Experience:\\
+   \\Utilize modern web technologies to create an app-like experience, including smooth animations, transitions, and interactions.\\
+
+5. Performance Optimization:\\
+   \\Optimize the performance of the PWA, ensuring fast loading times and smooth interactions.\\
+
+6. Progressive Enhancement:\\
+   \\Implement progressive enhancement to provide a baseline experience for all users while offering advanced features to those with modern browsers.\\
+
+\subsection{Requirements for a PWA Development Environment:}
+
+1. Code Editor:\\
+   \\Use a reliable code editor like Visual Studio Code, Atom, or Sublime Text for writing and editing PWA code.\\
+
+2. Version Control System:\\
+   \\Implement a version control system (e.g., Git) to track changes, collaborate with team members, and manage the project's codebase.\\
+
+3. Node.js and npm:\\
+   \\Install Node.js for server-side JavaScript execution and npm for managing dependencies and running build scripts.\\
+
+4. Service Worker Toolbox:\\
+   \\Utilize tools like Workbox for generating and managing service workers to implement offline capabilities and efficient caching strategies.\\
+
+5. Bundling Tools:\\
+   \\Use bundlers like Webpack or Parcel to bundle and optimize your PWA's assets for production.\\
+
+6. Testing Tools:\\
+   \\Implement testing frameworks like Jest or Mocha for unit and integration testing. Use tools like Lighthouse for auditing performance, accessibility, and best practices.\\
+
+7. Continuous Integration (CI) System:\\
+   \\Set up a CI system (e.g., Jenkins, Travis CI, GitHub Actions) to automate testing and deployment processes.\\
+
+\subsection{Types of Tools for a PWA Development Environment:}
+
+1. Browser Developer Tools:\\
+   \\Leverage browser developer tools (e.g., Chrome DevTools, Firefox Developer Tools) for debugging, profiling, and testing during development.\\
+
+2. Deployment and Hosting Platforms:\\
+   \\Choose platforms like Firebase Hosting, Netlify, or GitHub Pages for deploying and hosting your PWA. These platforms often provide features like SSL, CDN, and easy deployment.\\
+
+3. Cross-Browser Testing Tools:\\
+   \\Use tools like BrowserStack, CrossBrowserTesting, or Sauce Labs to perform cross-browser testing and ensure compatibility across different browsers.\\
+
+4. Docker:\\
+   \\Consider using Docker for containerization, making it easier to deploy and scale your PWA in various environments.\\
+
+5. Performance Monitoring Tools:\\
+   \\Implement tools like Google Analytics or New Relic for monitoring the performance of your PWA in real-time.\\
+
+6. Security Tools:\\
+   \\Use security tools and practices to secure your PWA, including HTTPS, Content Security Policy (CSP), and regular security audits.\\
+
+    \section{References}
+        \textbf{Progressive web applications}\\
+        Progressive web apps | MDN. (2023, October 25). MDN Web Docs. \\\hyperlink{https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps}\\
+        \\\textbf{The Power of Progressive Web Apps (PWAs) in Enhancing User Experience}\\
+        Dhoka, S. (2023, November 29). The power of progressive web apps (PWAs) in enhancing user experience. Medium. 
+        \\\hyperlink{https://medium.com/@simrandhoka067/the-power-of-progressive-web-apps-pwas-in-enhancing-user-experience-e1e25328ec1f}\\
+        \\\textbf{Progressive web app, web app, web service}\\
+        Progressive web app development company | Web app developers. (2022, August 23). Smarther. \\\hyperlink{https://www.smarther.co/progressive-web-app-development-company/}\\
+        \\\textbf{Top Best PWA Development Tools}\\
+        Anh, D. T. (2023, August 30). Top Best PWA development Tools and Technologies for your business. Magenest - One-Stop Digital Transformation Solution. 
+        \\\hyperlink{https://magenest.com/en/pwa-development-tools/}\\
+        \\\textbf{The 5 best tools for building progressive web apps fast}\\
+        David, M. (2021, June 19). The 5 best tools for building progressive web apps fast. TechBeacon. \\\hyperlink{https://techbeacon.com/app-dev-testing/5-best-tools-building-progressive-web-apps-fast}\\
+
+\end{document}
