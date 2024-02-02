@@ -1,0 +1,125 @@
+\documentclass[conference]{IEEEtran}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\begin{document}
+
+\title{Software Requirements Specification for Ecometer}
+
+\author{\IEEEauthorblockN{EcoMeter}
+\IEEEauthorblockA{
+EcoMeter@gmail.com}
+}
+
+\maketitle
+
+\section{Introduction}
+
+\subsection{Purpose}
+The purpose of the web application Ecometer is to measure energy efficiency in homes through sensors, providing users with detailed information on energy consumption and suggestions for improving efficiency.
+
+\subsection{Scope}
+The system will include features for real-time data collection, energy consumption analysis, and reporting to users of high consumption.
+
+\section{Overall Description}
+
+\subsection{Product Perspective}
+Ecometer will be an interactive web application that connects with sensors installed in homes to collect data on energy consumption. Data will be stored in a database for further analysis and presentations on dashboards.
+
+\subsection{Product Features}
+
+\begin{enumerate}
+  \item \textbf{Registration}
+     \begin{itemize}
+        \item Users can register on the web application easily.
+        \item Easy to use user interface for navigating.
+     \end{itemize}
+
+  \item \textbf{Data Collection}
+     \begin{itemize}
+        \item Sensors will collect real-time data on energy consumption in different areas of the home.
+        \item Detailed data, such as consumption per device and per hour.
+     \end{itemize}
+
+  \item \textbf{Energy Consumption Analysis}
+     \begin{itemize}
+        \item The application will perform analysis on the collected data.
+        \item The dashboards will show key data for decision making.
+     \end{itemize}
+
+  \item \textbf{Customized Reports}
+     \begin{itemize}
+        \item Generation of notifications if the consumption reaches high levels.
+        \item Visual and easy-to-understand information, including charts and comparisons.
+     \end{itemize}
+\end{enumerate}
+
+\subsection{User Classes and Characteristics}
+
+\begin{itemize}
+    \item \textbf{Residential Users:} Homeowners who wish to monitor and improve energy efficiency.
+    \item \textbf{System Administrators:} Responsible for maintaining and updating the platform.
+\end{itemize}
+
+\section{Specific Requirements}
+
+\subsection{Functional Requirements}
+
+\subsubsection{Registration}
+
+\begin{itemize}
+    \item Users should be able to see new sensors associated with their account.
+\end{itemize}
+
+\subsubsection{Data Collection}
+
+\begin{itemize}
+    \item Sensors should send real-time data to the application.
+    \item Secure storage of data in the system's database.
+\end{itemize}
+
+\subsubsection{Energy Consumption Analysis}
+
+\begin{itemize}
+    \item The application will perform statistical analysis on the collected data.
+    \item Identification of consumption patterns and habits.
+\end{itemize}
+
+\subsubsection{Customized Reports}
+
+\begin{itemize}
+    \item Users can generate personalized notifications  on their energy consumption.
+    \item Visual and easily understandable information, including charts and comparisons.
+\end{itemize}
+
+\subsection{Non-functional Requirements}
+
+\subsubsection{Performance}
+
+\begin{itemize}
+    \item The application adapts to different devices.
+    \item Response time for viewing reports should not exceed 5 seconds.
+\end{itemize}
+
+\subsubsection{Security}
+
+\begin{itemize}
+    \item All user and consumption data must be stored securely.
+    \item The database will create backups daily in case of any security breach or data loss.
+\end{itemize}
+
+\section{Constraints}
+
+\begin{itemize}
+    \item The application must be compatible with modern browsers such as Chrome, Firefox, and Safari.
+    \item Development will be carried out using web development technologies, such as Laravel and MYSQL.
+\end{itemize}
+
+\section{Approval}
+
+The stakeholders involved in the project confirm that this Software Requirements Specification accurately reflects the needs and expectations of the users for the Ecometer project.
+
+\end{document}
