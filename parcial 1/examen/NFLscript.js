@@ -1,5 +1,5 @@
 // La liga de la NFL requiere una aplicacion en JS que resuelva el problema de la pizarra de pendientes, la aplicaicones debe contemplar 
-// el control de la lsita de pendientes (ToDo), esta aplicación debe de obtener la lista de pendientes de la siguiente url https://jsonplaceholder.typicode.com/todos
+// el control de la lista de pendientes (ToDo), esta aplicación debe de obtener la lista de pendientes de la siguiente url https://jsonplaceholder.typicode.com/todos
 // Se recomienda visitar la url y comprobar quew está toda la información necesaria, por otro lado la NFL necesita que la aplicación realice lo siguiente
 // 1.- Lista de todos los pendientes(solo IDs)         
 // 2.- Lista de todos los pendientes(IDs y Titles)         
@@ -56,6 +56,7 @@ function mostrarSoloIDs() {
       });
 }
 
+//funcion para mostrar IDs y titles
 function mostrarIDsyTitulos() {
   return obtenerListaPendientes()
       .then(pendientes => {
@@ -65,6 +66,7 @@ function mostrarIDsyTitulos() {
       });
 }
 
+//funcion para mostrar pendientes que no estan resueltas
 function mostrarPendientesNoResueltos() {
   return obtenerListaPendientes()
       .then(pendientes => {
@@ -80,6 +82,7 @@ function mostrarPendientesNoResueltos() {
       });
 }
 
+//funcion para mostrar pendientes que estan resueltas
 function mostrarPendientesResueltos() {
   return obtenerListaPendientes()
       .then(pendientes => {
@@ -95,6 +98,7 @@ function mostrarPendientesResueltos() {
       });
 }
 
+//funcion para mostrar IDs y userIDs
 function mostrarTodosPendientesIDyUserID() {
   return obtenerListaPendientes()
       .then(pendientes => {
@@ -105,6 +109,7 @@ function mostrarTodosPendientesIDyUserID() {
       });
 }
 
+//funcion para mostrar pendientes que estan resueltas con IDs y userIDs
 function mostrarPendientesResueltosIDyUserID() {
   return obtenerListaPendientes()
       .then(pendientes => {
@@ -120,6 +125,7 @@ function mostrarPendientesResueltosIDyUserID() {
       });
 }
 
+//funcion para mostrar pendientes que no estan resueltas con IDs y userIDs
 function mostrarPendientesSinResolverIDyUserID() {
   return obtenerListaPendientes()
       .then(pendientes => {
@@ -135,7 +141,7 @@ function mostrarPendientesSinResolverIDyUserID() {
       });
 }
 
-
+//funcion main para permitir que se pueda elegir entras las 7 opciones para mostrar la api
 async function main() {
   let opcion;
   do {
