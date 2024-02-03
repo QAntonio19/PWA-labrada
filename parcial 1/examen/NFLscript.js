@@ -174,7 +174,7 @@ async function main() {
   } while (opcion !== 0);
 }
 
-//funcion para hacer preguntas al usuario
+//funcion para hacer preguntas de que si quiere obtener otro json o salir
 function pregunta(texto) {
     return new Promise(resolve => {
         readline.question(texto, answer => {
