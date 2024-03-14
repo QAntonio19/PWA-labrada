@@ -6,7 +6,7 @@ function sumaruno(numero){
         setTimeout(function(){
             resolve(numero + 1)
         }, 800);
-    })
+    })  
     return prom;
 }
 
