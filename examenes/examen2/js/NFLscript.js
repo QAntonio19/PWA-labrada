@@ -29,18 +29,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function mostrarSoloIDs() {
         obtenerListaPendientes()
-            .then(pendientes => {
-                const output = document.getElementById('output');
-                output.innerHTML = '';
-                pendientes.forEach(pendiente => {
-                    output.innerHTML += `<p>ID: ${pendiente.id}</p>`;
-                });
+        .then(pendientes => {
+            const output = document.getElementById('output');
+            output.innerHTML = '';
+            pendientes.forEach(pendiente => {
+                output.innerHTML += `<p>ID: ${pendiente.id}</p>`;
             });
+        });
     }
 
-  // Función para mostrar IDs y títulos
-function mostrarIDsyTitulos() {
-    return obtenerListaPendientes()
+    function mostrarIDsyTitulos() {
+        return obtenerListaPendientes()
         .then(pendientes => {
             const output = document.getElementById('output');
             output.innerHTML = '';
@@ -48,11 +47,10 @@ function mostrarIDsyTitulos() {
                 output.innerHTML += `<p>ID: ${pendiente.id}, Title: ${pendiente.title}</p>`;
             });
         });
-}
+    }
 
-// Función para mostrar pendientes no resueltos
-function mostrarPendientesNoResueltos() {
-    return obtenerListaPendientes()
+    function mostrarPendientesNoResueltos() {
+        return obtenerListaPendientes()
         .then(pendientes => {
             const output = document.getElementById('output');
             output.innerHTML = '';
@@ -61,11 +59,11 @@ function mostrarPendientesNoResueltos() {
                 output.innerHTML += `<p>ID: ${pendiente.id}, Title: ${pendiente.title}</p>`;
             });
         });
-}
+    }
 
-// Función para mostrar pendientes resueltos
-function mostrarPendientesResueltos() {
-    return obtenerListaPendientes()
+
+    function mostrarPendientesResueltos() {
+        return obtenerListaPendientes()
         .then(pendientes => {
             const output = document.getElementById('output');
             output.innerHTML = '';
@@ -74,11 +72,10 @@ function mostrarPendientesResueltos() {
                 output.innerHTML += `<p>ID: ${pendiente.id}, Title: ${pendiente.title}</p>`;
             });
         });
-}
+    }
 
-// Función para mostrar IDs y userIds
-function mostrarTodosPendientesIDyUserID() {
-    return obtenerListaPendientes()
+    function mostrarTodosPendientesIDyUserID() {
+        return obtenerListaPendientes()
         .then(pendientes => {
             const output = document.getElementById('output');
             output.innerHTML = '';
@@ -86,11 +83,10 @@ function mostrarTodosPendientesIDyUserID() {
                 output.innerHTML += `<p>ID: ${pendiente.id}, UserId: ${pendiente.userId}</p>`;
             });
         });
-}
+    }
 
-// Función para mostrar pendientes resueltos con IDs y userIds
-function mostrarPendientesResueltosIDyUserID() {
-    return obtenerListaPendientes()
+    function mostrarPendientesResueltosIDyUserID() {
+        return obtenerListaPendientes()
         .then(pendientes => {
             const output = document.getElementById('output');
             output.innerHTML = '';
@@ -99,11 +95,11 @@ function mostrarPendientesResueltosIDyUserID() {
                 output.innerHTML += `<p>ID: ${pendiente.id}, UserId: ${pendiente.userId}</p>`;
             });
         });
-}
+    }
 
-// Función para mostrar pendientes no resueltos con IDs y userIds
-function mostrarPendientesSinResolverIDyUserID() {
-    return obtenerListaPendientes()
+
+    function mostrarPendientesSinResolverIDyUserID() {
+        return obtenerListaPendientes()
         .then(pendientes => {
             const output = document.getElementById('output');
             output.innerHTML = '';
@@ -112,21 +108,17 @@ function mostrarPendientesSinResolverIDyUserID() {
                 output.innerHTML += `<p>ID: ${pendiente.id}, UserId: ${pendiente.userId}</p>`;
             });
         });
-}
+    }
 
-// Función para resetear el área donde se muestran los IDs
-function resetearOutput() {
-    const output = document.getElementById('output');
-    output.innerHTML = '';
-}
-
-    // Funciones restantes para mostrar los diferentes datos de pendientes, similares a mostrarSoloIDs()
+    function resetearOutput() {
+        const output = document.getElementById('output');
+        output.innerHTML = '';
+    }
 
     function main() {
         mostrarMenu();
     }
 
-    // Hacer que las funciones estén disponibles globalmente
     window.resetearOutput = resetearOutput;
     window.mostrarSoloIDs = mostrarSoloIDs;
     window.mostrarIDsyTitulos = mostrarIDsyTitulos;
@@ -135,7 +127,6 @@ function resetearOutput() {
     window.mostrarTodosPendientesIDyUserID = mostrarTodosPendientesIDyUserID;
     window.mostrarPendientesResueltosIDyUserID = mostrarPendientesResueltosIDyUserID;
     window.mostrarPendientesSinResolverIDyUserID = mostrarPendientesSinResolverIDyUserID;
-    // Resto de funciones a definir globalmente de la misma manera
 
     main();
 });
